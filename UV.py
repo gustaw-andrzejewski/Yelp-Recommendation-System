@@ -4,12 +4,6 @@ import numpy as np
 from tqdm import tqdm
 
 
-from typing import Dict, Tuple
-
-import numpy as np
-from tqdm import tqdm
-
-
 class UVDecomposition:
     def __init__(self, seed: int = None):
         """
