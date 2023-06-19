@@ -129,7 +129,6 @@ class UVDecomposition:
         GD_type: str = "BGD",
         batch_size: int = None,
     ) -> float:
-        non_zero_indices = np.argwhere(M != 0)
         """
         Performs one training step.
 
@@ -142,6 +141,7 @@ class UVDecomposition:
         Returns:
             float: RMSE after the training step.
         """
+        non_zero_indices = np.argwhere(M != 0)
         if GD_type == "BGD":
             indices = np.indices(M.shape).reshape(2, -1).T
         elif GD_type == "SGD":
